@@ -19,104 +19,138 @@
   <body>
     <div class="site-shell">
       <header class="topbar">
-        <a class="brand" href="#hero" aria-label="Accueil Codio">
+        <button class="brand brand-button" data-nav="home" aria-label="Retour accueil">
           <img src="https://codio.be/wp-content/uploads/2024/09/logoIco.png" alt="Logo Codio" />
           <span>Codio</span>
-        </a>
+        </button>
         <nav>
-          <a href="#services">Services</a>
-          <a href="#about">Approche</a>
-          <a href="#contact">Contact</a>
+          <button data-nav="services">Services</button>
+          <button data-nav="about">Approche</button>
+          <button data-nav="portfolio">Portfolio</button>
+          <button data-nav="contact">Contact</button>
         </nav>
       </header>
 
-      <main>
-        <section id="hero" class="hero card">
-          <div class="hero-copy">
-            <p class="eyebrow">Expérience digitale sur mesure</p>
-            <h1>Nous repoussons vos limites.</h1>
-            <p class="lead">
-              Une expérience digitale, un contrat clair, toujours avec le sourire. Codio accompagne vos projets web et
-              mobile avec une approche simple, humaine et durable.
-            </p>
-            <div class="actions">
-              <a class="btn btn-primary" href="#contact">Parler de votre projet</a>
-              <a class="btn btn-secondary" href="#services">Voir les services</a>
-            </div>
-            <ul class="highlights">
-              <li>Une vitrine, une image, un contact</li>
-              <li>Une évolution, votre innovation</li>
-              <li>Une réalisation sur mesure, une gestion, un suivi</li>
-            </ul>
-          </div>
-
-          <div class="hero-visual">
-            <div class="hero-image hero-image-main"></div>
-            <div class="hero-image hero-image-secondary"></div>
-            <aside class="quote-box">
-              <span>“</span>
-              <p>
-                Chez Codio, nos produits sont analysés et élaborés main dans la main avec chacun de nos partenaires.
+      <div class="viewport" id="viewport">
+        <main class="panel home-panel" id="home-panel">
+          <section id="hero" class="hero card">
+            <div class="hero-copy">
+              <p class="eyebrow">Expérience digitale sur mesure</p>
+              <h1>Nous repoussons vos limites.</h1>
+              <p class="lead">
+                Une expérience digitale, un contrat clair, toujours avec le sourire. Codio accompagne vos projets web
+                et mobile avec une approche simple, humaine et durable.
               </p>
-              <strong>Benjamin</strong>
-            </aside>
+              <div class="actions">
+                <a class="btn btn-primary" href="#contact">Parler de votre projet</a>
+                <button class="btn btn-secondary" data-open-portfolio>Voir le portfolio</button>
+              </div>
+              <ul class="highlights">
+                <li>Une vitrine, une image, un contact</li>
+                <li>Une évolution, votre innovation</li>
+                <li>Une réalisation sur mesure, une gestion, un suivi</li>
+              </ul>
+            </div>
+
+            <div class="hero-visual">
+              <div class="hero-image hero-image-main"></div>
+              <div class="hero-image hero-image-secondary"></div>
+              <aside class="quote-box">
+                <span>“</span>
+                <p>
+                  Chez Codio, nos produits sont analysés et élaborés main dans la main avec chacun de nos partenaires.
+                </p>
+                <strong>Benjamin</strong>
+              </aside>
+            </div>
+          </section>
+
+          <section id="services" class="services-grid">
+            <article class="card service-card">
+              <p class="eyebrow">Sites web</p>
+              <h2>Un site qui inspire confiance dès le premier regard.</h2>
+              <p>
+                Avoir un site web est aujourd’hui une évidence. La recherche de clients passe par le web, et ce premier
+                contact doit être une réussite. C’est exactement notre objectif.
+              </p>
+            </article>
+
+            <article class="card service-card accent-card">
+              <p class="eyebrow">Applications mobiles</p>
+              <h2>Des outils utiles, rapides et pensés pour le terrain.</h2>
+              <p>
+                Simplifier la vie, c’est l’objectif de toute application. Rapidité, efficacité et ergonomie, avec une
+                implication réelle dans l’évolution de votre business.
+              </p>
+            </article>
+          </section>
+
+          <section id="about" class="card about-card">
+            <div>
+              <p class="eyebrow">Approche</p>
+              <h2>Détermination et produits d’excellence.</h2>
+            </div>
+            <div class="about-text">
+              <p>
+                Notre force réside dans la réalisation de vos produits tout en établissant un lien durable avec vous,
+                tournés ensemble vers l’avenir.
+              </p>
+              <p>
+                Chaque projet est conçu avec clarté, implication et sens du détail pour donner naissance à une solution
+                sur mesure, cohérente avec votre image et vos objectifs.
+              </p>
+            </div>
+          </section>
+
+          <section id="contact" class="card contact-card">
+            <div>
+              <p class="eyebrow">Contact</p>
+              <h2>Discutons simplement de votre prochain produit.</h2>
+              <p>
+                Besoin d’un site vitrine, d’une application mobile ou d’une refonte plus moderne de votre présence
+                digitale ? Parlons-en.
+              </p>
+            </div>
+            <div class="contact-links">
+              <a href="tel:+32474557831">+32 (0)474 55 78 31</a>
+              <a href="mailto:benjamin@codio.be">benjamin&#64;codio.be</a>
+              <p>Numéro d’entreprise: BE0681669973</p>
+              <button class="link-button" data-open-portfolio>Explorer le portfolio</button>
+            </div>
+          </section>
+        </main>
+
+        <section class="panel portfolio-panel" id="portfolio-panel" aria-label="Portfolio Codio">
+          <div class="portfolio-head card">
+            <div>
+              <p class="eyebrow">Portfolio</p>
+              <h2>Nos réalisations, nos projets, vos idées.</h2>
+              <p class="lead small">
+                Un aperçu de réalisations web, branding et interfaces métiers, avec une lecture plus actuelle du travail
+                déjà présenté sur Codio.
+              </p>
+            </div>
+            <button class="btn btn-secondary back-button" data-close-portfolio>Retour au site</button>
+          </div>
+
+          <div class="portfolio-grid">
+            <article class="portfolio-card card"><img src="assets/portfolio/Screenshot-2024-09-09-at-14.28.34.png" alt="Interface featherLIMS" /><div><h3>Interface métier LIMS</h3><p>Un écran d’import structuré pour un outil de laboratoire, pensé pour accélérer la saisie et fiabiliser les données.</p></div></article>
+            <article class="portfolio-card card"><img src="assets/portfolio/Screenshot-2024-09-09-at-14.18.31.png" alt="Site de kinésithérapie" /><div><h3>Site vitrine santé</h3><p>Une présence web claire pour un cabinet de kinésithérapie, avec services, disponibilité et contact mis en avant.</p></div></article>
+            <article class="portfolio-card card"><img src="assets/portfolio/slider1-1.jpg" alt="Visuel sombre de bureau moderne" /><div><h3>Direction visuelle éditoriale</h3><p>Un visuel d’ambiance premium pour soutenir une identité digitale sobre, inspirante et plus haut de gamme.</p></div></article>
+            <article class="portfolio-card card"><img src="assets/portfolio/Screenshot-2024-09-09-at-14.27.04.png" alt="Positive Zenitude" /><div><h3>Coaching et bien-être</h3><p>Une landing page douce et rassurante pour un univers coaching, centrée sur l’accompagnement humain.</p></div></article>
+            <article class="portfolio-card card"><img src="assets/portfolio/Screenshot-2024-09-09-at-14.17.59-1.png" alt="Autre site de kinésithérapie" /><div><h3>Présentation de praticien</h3><p>Une vitrine professionnelle qui clarifie les spécialisations, les bénéfices et le parcours de soin.</p></div></article>
+            <article class="portfolio-card card"><img src="assets/portfolio/default.png" alt="Logo nuage" /><div><h3>Logo minimal</h3><p>Un symbole simple et mémorisable, adapté à une identité légère, tech ou service digital.</p></div></article>
+            <article class="portfolio-card card"><img src="assets/portfolio/Screenshot-2024-09-09-at-14.26.29.png" alt="Entreprise de peinture et décoration" /><div><h3>Artisanat et prise de rendez-vous</h3><p>Un site orienté conversion pour un métier de terrain, avec mise en avant du savoir-faire et du contact rapide.</p></div></article>
+            <article class="portfolio-card card"><img src="assets/portfolio/1.jpg" alt="Bocalinette produit artisanal" /><div><h3>Photo produit artisanale</h3><p>Une image chaleureuse conçue pour renforcer une marque food locale et son univers authentique.</p></div></article>
+            <article class="portfolio-card card"><img src="assets/portfolio/4-02.jpg" alt="Création graphique à dominante végétale" /><div><h3>Visuel branding illustré</h3><p>Une création graphique riche et expressive, pensée pour ancrer une marque dans un imaginaire naturel et vivant.</p></div></article>
+            <article class="portfolio-card card"><img src="assets/portfolio/Screenshot-2024-09-09-at-14.26.18.png" alt="Interface de service professionnel" /><div><h3>Page service professionnelle</h3><p>Une interface web concise pour exposer une offre métier, rassurer rapidement et orienter vers l’action.</p></div></article>
+            <article class="portfolio-card card"><img src="assets/portfolio/2-01.jpg" alt="Logo café rond" /><div><h3>Identité pour coffee brand</h3><p>Un logo circulaire expressif pour une marque café, facile à décliner sur packaging et supports sociaux.</p></div></article>
+            <article class="portfolio-card card"><img src="assets/portfolio/Screenshot-2024-09-09-at-14.37.05.png" alt="Capture de développement dans VS Code" /><div><h3>Développement applicatif</h3><p>Un aperçu du travail backend et base de données, montrant la capacité à livrer aussi la partie technique du produit.</p></div></article>
           </div>
         </section>
-
-        <section id="services" class="services-grid">
-          <article class="card service-card">
-            <p class="eyebrow">Sites web</p>
-            <h2>Un site qui inspire confiance dès le premier regard.</h2>
-            <p>
-              Avoir un site web est aujourd’hui une évidence. La recherche de clients passe par le web, et ce premier
-              contact doit être une réussite. C’est exactement notre objectif.
-            </p>
-          </article>
-
-          <article class="card service-card accent-card">
-            <p class="eyebrow">Applications mobiles</p>
-            <h2>Des outils utiles, rapides et pensés pour le terrain.</h2>
-            <p>
-              Simplifier la vie, c’est l’objectif de toute application. Rapidité, efficacité et ergonomie, avec une
-              implication réelle dans l’évolution de votre business.
-            </p>
-          </article>
-        </section>
-
-        <section id="about" class="card about-card">
-          <div>
-            <p class="eyebrow">Approche</p>
-            <h2>Détermination et produits d’excellence.</h2>
-          </div>
-          <div class="about-text">
-            <p>
-              Notre force réside dans la réalisation de vos produits tout en établissant un lien durable avec vous,
-              tournés ensemble vers l’avenir.
-            </p>
-            <p>
-              Chaque projet est conçu avec clarté, implication et sens du détail pour donner naissance à une solution
-              sur mesure, cohérente avec votre image et vos objectifs.
-            </p>
-          </div>
-        </section>
-
-        <section id="contact" class="card contact-card">
-          <div>
-            <p class="eyebrow">Contact</p>
-            <h2>Discutons simplement de votre prochain produit.</h2>
-            <p>
-              Besoin d’un site vitrine, d’une application mobile ou d’une refonte plus moderne de votre présence
-              digitale ? Parlons-en.
-            </p>
-          </div>
-          <div class="contact-links">
-            <a href="tel:+32474557831">+32 (0)474 55 78 31</a>
-            <a href="mailto:benjamin@codio.be">benjamin&#64;codio.be</a>
-            <p>Numéro d’entreprise: BE0681669973</p>
-            <a href="https://codio.be/index.php/27-2/" target="_blank" rel="noreferrer">Voir le portfolio</a>
-          </div>
-        </section>
-      </main>
+      </div>
     </div>
+
+    <script src="app.js"></script>
   </body>
 </html>
