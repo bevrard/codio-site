@@ -59,7 +59,7 @@ button { cursor: pointer; }
   border: 0;
   padding: 0;
 }
-.brand img { width: 38px; height: 38px; border-radius: 10px; }
+.brand img { width: 38px; height: 38px; border-radius: 0; }
 
 nav { display: flex; gap: 10px; flex-wrap: wrap; }
 nav button {
